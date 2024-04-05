@@ -14,7 +14,14 @@ const HomePage = () => {
   const currentProducts = data.slice(indexOfFirstProduct, indexOfLastProduct);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
+  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  
   return (
     <div>
       {/* Product Grid */}
@@ -43,7 +50,10 @@ const HomePage = () => {
                   className={`px-3 py-1 rounded ${
                     currentPage === index + 1 ? "bg-blue-900 text-white" : "bg-gray-200"
                   }`}
-                  onClick={() => paginate(index + 1)}
+                  onClick={() => {
+                    paginate(index + 1);
+                    scrollToTop();
+                  }}
                 >
                   {index + 1}
                 </button>
