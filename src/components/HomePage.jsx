@@ -42,7 +42,7 @@ const HomePage = () => {
         )}
 
         {/* Pagination */}
-        <div className="mt-2 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <ul className="flex space-x-2">
             {Array.from({ length: Math.ceil(data.length / productsPerPage) }).map((_, index) => (
               <li key={index}>

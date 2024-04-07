@@ -60,7 +60,7 @@ const ProductDetails = () => {
             <span className="text-gray-700">Rating:</span>
             <div className="ml-2 flex items-center">
               <span className="text-lg text-yellow-500 font-semibold">
-                {data.rating} ⭐
+                {data.rating}
               </span>
             </div>
           </div>
