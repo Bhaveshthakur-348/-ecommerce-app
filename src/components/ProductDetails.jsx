@@ -27,7 +27,7 @@ const ProductDetails = () => {
   return (
     <div className="flex flex-col md:flex-row justify-around p-4">
       {loading || !data ? (
-        <div className="w-full md:w-1/3 mb-4 md:mb-0 animate-pulse bg-gray-300 h-64"></div>
+        <div data-testid="loading-indicator" className="w-full md:w-1/3 mb-4 md:mb-0 animate-pulse bg-gray-300 h-64"></div>
       ) : (
         <div className="flex justify-center flex-col">
           <img

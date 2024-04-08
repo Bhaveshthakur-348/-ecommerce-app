@@ -36,13 +36,13 @@ const HomePage = () => {
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
             {/* Render 10 shimmer boxes */}
             {Array.from({ length: productsPerPage }).map((_, index) => (
-              <div key={index} className="animate-pulse bg-gray-200 h-64 w-60"></div>
+              <div key={index} data-testid="shimmer-box" className="animate-pulse bg-gray-200 h-64 w-60"></div>
             ))}
           </div>
         )}
 
         {/* Pagination */}
-        <div className="mt-4 flex justify-center">
+        <div className="mt-4 flex justify-center" data-testid="product-data">
           <ul className="flex space-x-2">
             {Array.from({ length: Math.ceil(data.length / productsPerPage) }).map((_, index) => (
               <li key={index}>
